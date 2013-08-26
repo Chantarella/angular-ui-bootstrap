@@ -196,8 +196,8 @@ dialogModule.provider("$dialog", function(){
     };
 
     Dialog.prototype._addElementsToDom = function(){
+      this.modalEl.css({display: 'block'});
       body.append(this.modalEl);
-
       if(this.options.backdrop) { 
         if (activeBackdrops.value === 0) {
           body.append(this.backdropEl); 
